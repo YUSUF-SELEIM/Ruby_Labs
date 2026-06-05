@@ -1,0 +1,20 @@
+[
+  {
+    "title": "AI and Stuff",
+    "author": "Bubble",
+    "isbn": "12312314125125125125",
+    "count": 1
+  },
+  {
+    "title": "Bubble IPO",
+    "author": "Kelp",
+    "isbn": "8832183885158158158",
+    "count": 1
+  },
+  {
+    "title": "ITI Guide",
+    "author": "Yusuf Abdelfattah",
+    "isbn": "22222222222322222222",
+    "count": 1
+  }
+]
