@@ -1,0 +1,8 @@
+2026-06-06T13:48:07+00:00 info -> processing transactions User yusuf1 transaction with value -20, User yusuf1 transaction with value -30, User yusuf1 transaction with value -50, User yusuf1 transaction with value -100, User yusuf1 transaction with value -100, User yusuf4 transaction with value -100...
+2026-06-06T13:48:07+00:00 info -> User yusuf1 transaction with value -20 succeeded
+2026-06-06T13:48:07+00:00 info -> User yusuf1 transaction with value -30 succeeded
+2026-06-06T13:48:07+00:00 info -> User yusuf1 transaction with value -50 succeeded
+2026-06-06T13:48:07+00:00 warning -> yusuf1 has 0 balance
+2026-06-06T13:48:07+00:00 info -> User yusuf1 transaction with value -100 succeeded
+2026-06-06T13:48:07+00:00 error -> User yusuf1 transaction with value -100 failed with message not enough balance
+2026-06-06T13:48:07+00:00 error -> User yusuf4 transaction with value -100 failed with message yusuf4 not exist in the bank
