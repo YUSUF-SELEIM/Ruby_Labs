@@ -1,0 +1,25 @@
+<h1><%= @article.title %></h1>
+<p>By: <%= @article.user.email_address %></p>
+<p>Status: <%= @article.status %></p>
+<p>Reports: <%= @article.reports_count %></p>
+
+<% if @article.image.attached? %>
+  <%= image_tag @article.image, style: "max-width: 500px" %>
+<% end %>
+
+<div>
+  <%= @article.body %>
+</div>
+
+<% if authenticated? %>
+  <% if Current.user == @article.user %>
+    <%= link_to "Edit", edit_article_path(@article) %>
+    <%= button_to "Delete", article_path(@article),
+          method: :delete,
+          data: { turbo_confirm: "Are you sure?" } %>
+  <% else %>
+    <%= button_to "Report", report_article_path(@article), method: :post %>
+  <% end %>
+<% end %>
+
+<%= link_to "Back", articles_path %>
