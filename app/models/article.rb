@@ -15,7 +15,7 @@ class Article < ApplicationRecord
   end
 
   def check_reports
-    if reports_count >= 3
+    if reports_count >= 1
       self.status = :archived
     end
   end
