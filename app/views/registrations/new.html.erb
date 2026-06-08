@@ -1,0 +1,28 @@
+<h1>Create Account</h1>
+
+<%= form_with model: @user, url: registrations_path do |form| %>
+  <% if @user.errors.any? %>
+    <% @user.errors.full_messages.each do |msg| %>
+      <p style="color:red"><%= msg %></p>
+    <% end %>
+  <% end %>
+
+  <div>
+    <%= form.label :email_address, "Email" %>
+    <%= form.text_field :email_address %>
+  </div>
+
+  <div>
+    <%= form.label :password, "Password" %>
+    <%= form.password_field :password %>
+  </div>
+
+  <div>
+    <%= form.label :password_confirmation, "Confirm Password" %>
+    <%= form.password_field :password_confirmation %>
+  </div>
+
+  <%= form.submit "Register" %>
+<% end %>
+
+<p>Already have an account? <%= link_to "Log in", new_session_path %></p>
