@@ -23,7 +23,25 @@
     <%= javascript_importmap_tags %>
   </head>
 
-  <body>
-    <%= yield %>
-  </body>
+<body>
+  <nav>
+    <strong><%= link_to "Blog", root_path %></strong>
+    <% if authenticated? %>
+      <span>Hello, <%= Current.user.email_address %></span>
+      <%= button_to "Log Out", session_path, method: :delete %>
+    <% else %>
+      <%= link_to "Log In", new_session_path %>
+      <%= link_to "Register", new_registration_path %>
+    <% end %>
+  </nav>
+
+  <% if notice %>
+    <p style="color:green"><%= notice %></p>
+  <% end %>
+  <% if alert %>
+    <p style="color:red"><%= alert %></p>
+  <% end %>
+
+  <%= yield %>
+</body>
 </html>
